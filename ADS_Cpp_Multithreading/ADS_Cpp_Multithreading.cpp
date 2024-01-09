@@ -16,7 +16,7 @@ int main()
         ADS_Access* obj = new ADS_Access();
         ads_objects.push_back(obj);
         obj->run();
-        std::this_thread::sleep_for(std::chrono::milliseconds(166));
+        std::this_thread::sleep_for(std::chrono::milliseconds(200));
     }
 
     std::this_thread::sleep_for(std::chrono::milliseconds(8000));
@@ -28,7 +28,6 @@ int main()
     for (iter = ads_objects.begin(); iter != ads_objects.end(); ) {
         delete* iter;
         iter = ads_objects.erase(iter);
-
     }
 
     std::cout << "Press Enter to Exit" << std::endl;
